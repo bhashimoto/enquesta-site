@@ -1,0 +1,73 @@
+baseURL = "https://www.enquesta.com.br/"
+languageCode = "pt-BR"
+title = "Enquesta Inspeções Prediais de Gás"
+theme = ""
+
+[params]
+  whatsapp = "https://wa.me/5521XXXXXXXXX"
+  telefone = "(21) 3100-XXXX"
+  endereco = "Av. Embaixador Abelardo Bueno, 1340 – sala 401, Barra da Tijuca, RJ"
+
+[[menus.main]]
+  name = "Início"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "Serviços"
+  url = "#"
+  weight = 2
+  [menus.main.params]
+    hasChildren = true
+
+[[menus.main]]
+  name = "Áreas atendidas"
+  url = "#"
+  weight = 3
+  [menus.main.params]
+    hasChildren = true
+
+[[menus.main]]
+  name = "Sobre"
+  url = "/sobre/"
+  weight = 4
+
+[[menus.main]]
+  name = "Perguntas frequentes"
+  url = "/perguntas-frequentes/"
+  weight = 5
+
+[[menus.main]]
+  name = "Contato"
+  url = "/contato/"
+  weight = 6
+
+[[menus.servicos]]
+  name = "Inspeção residencial"
+  url = "/servicos/inspecao-residencial-de-gas/"
+  weight = 1
+
+[[menus.servicos]]
+  name = "Inspeção comercial"
+  url = "/servicos/inspecao-comercial-de-gas/"
+  weight = 2
+
+[[menus.servicos]]
+  name = "Reinspeção de gás"
+  url = "/servicos/reinspecao-de-gas/"
+  weight = 3
+
+[[menus.servicos]]
+  name = "Renovação (5 anos)"
+  url = "/servicos/nova-inspecao-periodica-renovacao/"
+  weight = 4
+
+[[menus.areas]]
+  name = "Barra da Tijuca / Zona Oeste"
+  url = "/areas-atendidas/inspecao-de-gas-barra-da-tijuca-zona-oeste/"
+  weight = 1
+
+[[menus.areas]]
+  name = "Zona Sul"
+  url = "/areas-atendidas/inspecao-de-gas-zona-sul-rj/"
+  weight = 2

@@ -1,0 +1,15 @@
+{{- $c := hugo.Data.enquesta.credenciais -}}
+<div class="spec-sheet">
+  <div class="spec-cell">
+    <div class="spec-label">Fundação</div>
+    <div class="spec-value">{{ $c.fundacao }}</div>
+  </div>
+  <div class="spec-cell">
+    <div class="spec-label">Registro CREA-RJ</div>
+    <div class="spec-value">{{ $c.crea_rj }}</div>
+  </div>
+  <div class="spec-cell">
+    <div class="spec-label">CNPJ</div>
+    <div class="spec-value spec-value-sm">{{ $c.cnpj }}</div>
+  </div>
+</div>

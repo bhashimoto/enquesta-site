@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ $wa := printf "https://wa.me/%s" site.Params.whatsapp_digits }}
+{{ $d := hugo.Data.enquesta }}
+
+<section class="section">
+  <div class="wrap narrow">
+    <span class="tag tag-outline">Orientação imediata</span>
+    <h1>{{ .Title }}</h1>
+    <div class="lead">{{ .Content }}</div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="{{ $wa }}" target="_blank" rel="noopener">Agendar pelo WhatsApp agora</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow">
+    <p class="eyebrow">O que fazer</p>
+    <h2>Como proceder a partir da notificação</h2>
+    <div class="steps">
+      {{ range $d.naturgy_steps }}
+      <div class="card step">
+        <div class="step-n">{{ .n }}</div>
+        <div>
+          <div class="card-title">{{ .title }}</div>
+          <p class="card-body">{{ .body }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow">
+    <div class="card">
+      <span class="tag tag-accent">Importante</span>
+      <p class="card-body">Se você já fez uma primeira inspeção com outro Organismo e possui irregularidades pendentes, a reinspeção deve seguir com o mesmo Organismo responsável por aquela inspeção.</p>
+    </div>
+  </div>
+</section>
+
+{{ partial "cta-plate.html" (dict "heading" "Fale com a Enquesta agora" "body" "Explicamos o procedimento e agendamos sua inspeção ou reinspeção pelo WhatsApp.") }}
+{{ end }}

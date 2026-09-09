@@ -1,0 +1,142 @@
+{{ define "main" }}
+{{ $wa := printf "https://wa.me/%s" site.Params.whatsapp_digits }}
+{{ $d := hugo.Data.enquesta }}
+
+<section class="section hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag tag-outline">Organismo de Inspeção Acreditado CGCRE/Inmetro</span>
+      <h1>Inspeção Periódica de Gás no Rio de Janeiro</h1>
+      <p class="lead">Precisa realizar a inspeção periódica de gás do seu imóvel? A Enquesta atende imóveis residenciais e comerciais em diversas regiões do Rio, incluindo Barra da Tijuca, Recreio, Zona Oeste e Zona Sul.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="{{ $wa }}" target="_blank" rel="noopener">Agendar minha inspeção</a>
+        <a class="btn btn-secondary" href="{{ $wa }}" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+      </div>
+    </div>
+    <div class="photo-slot" role="img" aria-label="Foto: técnico realizando inspeção de gás">
+      <span>Foto: técnico realizando inspeção de gás</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="o-que-e">
+  <div class="wrap measure">
+    <p class="eyebrow">O serviço</p>
+    <h2>O que é a Inspeção Periódica de Gás?</h2>
+    <p>A Inspeção Periódica de Gás é uma avaliação das condições das instalações e dos aparelhos a gás do imóvel, realizada para verificar sua conformidade com os requisitos de segurança aplicáveis.</p>
+    <p>No Estado do Rio de Janeiro, a inspeção periódica das instalações de gás está prevista na <strong>Lei Estadual nº 6.890/2014</strong> e na regulamentação aplicável. Além do cumprimento das exigências regulamentares, a inspeção contribui para identificar condições que possam comprometer a segurança dos usuários do imóvel.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap measure">
+    <p class="eyebrow">Obrigatoriedade</p>
+    <h2>Quem precisa passar pela Inspeção Periódica de Gás?</h2>
+    <p>Todo usuário de gás natural canalizado — residencial ou comercial — deve realizar a inspeção a cada cinco anos, pois equipamentos e tubulações podem se deteriorar com o tempo, causando vazamentos, intoxicações, incêndios e explosões.</p>
+    <p>A inspeção verifica se o imóvel está adequado às normas de segurança vigentes. Se as condições forem comprovadas, o imóvel recebe um selo de aprovação e um laudo de conformidade com validade de 5 anos. Caso não esteja, o responsável recebe um laudo com as irregularidades apontadas para providenciar as correções.</p>
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="{{ "/perguntas-frequentes/" | relURL }}">Quero saber como agendar</a>
+    </div>
+  </div>
+</section>
+
+<section class="section plate">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-invert">Quem pode realizar</p>
+    <h2>Um Organismo de Inspeção Acreditado pela CGCRE/Inmetro</h2>
+    <p class="plate-lead measure">A inspeção deve ser realizada por um Organismo de Inspeção devidamente acreditado pela Coordenação-Geral de Acreditação do Inmetro (CGCRE), dentro do respectivo escopo de acreditação. Ao contratar, verifique se o organismo emite nota fiscal, informa o resultado à concessionária, gera ART junto ao CREA e possui seguro de Responsabilidade Civil.</p>
+    {{ partial "spec-sheet.html" . }}
+  </div>
+</section>
+
+<section class="section" id="verificacoes">
+  <div class="wrap">
+    <p class="eyebrow">O procedimento</p>
+    <h2>O que é verificado durante a Inspeção de Gás?</h2>
+    <div class="checklist-grid">
+      {{ range $d.checklist }}
+      <div class="card"><div class="card-title">{{ . }}</div></div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap measure">
+    <p class="eyebrow">Se houver pendências</p>
+    <h2>O que acontece se forem encontradas irregularidades?</h2>
+    <p>Uma irregularidade na primeira inspeção não significa que todo o processo precise ser contratado de novo. As irregularidades são indicadas para que o responsável providencie as correções dentro do prazo legal aplicável. Depois das adequações, ocorre a reinspeção — a segunda visita do mesmo Organismo que realizou a primeira, para verificar se as pendências foram sanadas.</p>
+    <div class="card highlight-card">
+      <span class="tag tag-accent">Incluída no serviço</span>
+      <div class="card-title">Na Enquesta, a reinspeção já está incluída no valor contratado</div>
+      <p class="card-body">Não é uma nova inspeção — e deve ser feita pelo mesmo Organismo responsável pela primeira.</p>
+      <a class="enq-link" href="{{ "/servicos/reinspecao-de-gas/" | relURL }}">Ver como funciona a reinspeção →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Onde atendemos</p>
+    <h2>Regiões atendidas no Rio de Janeiro</h2>
+    <div class="region-grid">
+      <div class="card">
+        <div class="card-kicker">Sede</div>
+        <div class="card-title">Barra da Tijuca e Zona Oeste</div>
+        <p class="card-body">Atendimento em Barra da Tijuca, Recreio dos Bandeirantes e demais localidades da Zona Oeste.</p>
+        <a class="enq-link" href="{{ "/areas-atendidas/inspecao-de-gas-barra-da-tijuca-zona-oeste/" | relURL }}">Ver inspeção de gás na Barra →</a>
+      </div>
+      <div class="card">
+        <div class="card-kicker">Também atendemos</div>
+        <div class="card-title">Zona Sul do Rio</div>
+        <p class="card-body">Copacabana, Ipanema, Leblon, Lagoa, São Conrado e Gávea. Se seu bairro não estiver na lista, consulte disponibilidade.</p>
+        <a class="enq-link" href="{{ "/areas-atendidas/inspecao-de-gas-zona-sul-rj/" | relURL }}">Ver inspeção de gás na Zona Sul →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="card banner-card">
+      <div>
+        <h3>Recebeu uma notificação da Naturgy?</h3>
+        <p class="card-body">Se você recebeu um aviso sobre inspeção ou risco de corte, saiba exatamente o que fazer agora.</p>
+      </div>
+      <a class="btn btn-primary" href="{{ "/recebi-notificacao-da-naturgy/" | relURL }}">Recebi uma notificação, quero orientação</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Por que a Enquesta</p>
+    <h2>Por que realizar sua inspeção com a Enquesta?</h2>
+    <ul class="reasons">
+      {{ range $d.motivos }}
+      <li><span class="reasons-mark">+</span><span>{{ . }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap measure">
+    <p class="eyebrow">Dúvidas comuns</p>
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-list">
+      {{ range $d.faq }}
+      <details>
+        <summary>{{ .q }}</summary>
+        <p>{{ .a }}</p>
+      </details>
+      {{ end }}
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="{{ "/perguntas-frequentes/" | relURL }}">Ver todas as perguntas frequentes</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "cta-plate.html" (dict "showAddress" true) }}
+{{ end }}

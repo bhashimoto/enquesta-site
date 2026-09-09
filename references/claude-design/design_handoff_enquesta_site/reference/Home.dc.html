@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/industry-17415b42-e155-45d3-96c8-0c7b2f8d2665/styles.css">
+  <script src="./image-slot.js"></script>
+  <style>
+    body { max-width: 100%; overflow-x: hidden; }
+    a.enq-link { color: var(--color-accent-700); }
+    a.enq-link:hover { color: var(--color-accent-900); text-decoration: underline; }
+    .section { padding: 64px max(24px, calc((100% - 1080px) / 2)); }
+    .plate { border: 1px solid var(--color-divider); background: var(--color-accent-900); }
+    @media (max-width: 720px) {
+      .hero-grid, .checklist-grid, .region-grid, .plate-grid { grid-template-columns: 1fr !important; }
+      .section { padding: 40px 20px; }
+      h1 { font-size: 32px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body);">
+
+  <header class="nav" style="border-bottom: 1px solid var(--color-divider); position: sticky; top: 0; background: var(--color-bg); z-index: 10; padding-inline: max(24px, calc((100% - 1080px) / 2));">
+    <div class="nav-brand">ENQUESTA</div>
+    <nav style="display:flex; align-items:center; gap: var(--space-4); flex-wrap: wrap;">
+      <a href="#o-que-e">O que é</a>
+      <a href="#verificacoes">Verificações</a>
+      <a href="Inspecao-Gas-Barra-da-Tijuca.dc.html">Barra da Tijuca</a>
+      <a href="Recebi-Notificacao-Naturgy.dc.html">Notificação Naturgy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/{{ whatsappDigits }}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  </header>
+
+  <section class="section" style="padding-top: 56px;">
+    <div class="hero-grid" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items: center; max-width: 1080px; margin: 0 auto;">
+      <div>
+        <div class="tag tag-outline" style="margin-bottom: var(--space-4);">Organismo de Inspeção Acreditado CGCRE/Inmetro</div>
+        <h1 style="font-size: 48px; max-width: 620px;">Inspeção Periódica de Gás no Rio de Janeiro</h1>
+        <p style="font-size: 17px; max-width: 560px; opacity: 0.85;">Precisa realizar a inspeção periódica de gás do seu imóvel? A Enquesta atende imóveis residenciais e comerciais em diversas regiões do Rio, incluindo Barra da Tijuca, Recreio, Zona Oeste e Zona Sul.</p>
+        <div style="display:flex; gap: var(--space-3); margin-top: var(--space-6); flex-wrap: wrap;">
+          <a class="btn btn-primary" href="https://wa.me/{{ whatsappDigits }}" target="_blank" rel="noopener" style="padding: 12px 22px; font-size: 16px;">Agendar minha inspeção</a>
+          <a class="btn btn-secondary" href="https://wa.me/{{ whatsappDigits }}" target="_blank" rel="noopener" style="padding: 12px 22px; font-size: 16px;">Falar pelo WhatsApp</a>
+        </div>
+      </div>
+      <div class="blueprint duotone" style="position:relative; aspect-ratio: 4/3;">
+        
+        <image-slot id="hero-photo" shape="rect" placeholder="Foto: técnico realizando inspeção de gás"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="o-que-e" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">O serviço</h6>
+    <h2>O que é a Inspeção Periódica de Gás?</h2>
+    <p style="max-width: 720px; font-size: 16px;">A Inspeção Periódica de Gás é uma avaliação das condições das instalações e dos aparelhos a gás do imóvel, realizada para verificar sua conformidade com os requisitos de segurança aplicáveis.</p>
+    <p style="max-width: 720px; font-size: 16px;">No Estado do Rio de Janeiro, a inspeção periódica das instalações de gás está prevista na <strong>Lei Estadual nº 6.890/2014</strong> e na regulamentação aplicável. Além do cumprimento das exigências regulamentares, a inspeção contribui para identificar condições que possam comprometer a segurança dos usuários do imóvel.</p>
+  </section>
+
+  <section class="section" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">Obrigatoriedade</h6>
+    <h2>Quem precisa passar pela Inspeção Periódica de Gás?</h2>
+    <p style="max-width: 720px; font-size: 16px;">Todo usuário de gás natural canalizado — residencial ou comercial — deve realizar a inspeção a cada cinco anos, pois equipamentos e tubulações podem se deteriorar com o tempo, causando vazamentos, intoxicações, incêndios e explosões.</p>
+    <p style="max-width: 720px; font-size: 16px;">A inspeção verifica se o imóvel está adequado às normas de segurança vigentes. Se as condições forem comprovadas, o imóvel recebe um selo de aprovação e um laudo de conformidade com validade de 5 anos. Caso não esteja, o responsável recebe um laudo com as irregularidades apontadas para providenciar as correções.</p>
+    <a class="btn btn-secondary" href="#faq" style="margin-top: var(--space-2);">Quero saber como agendar</a>
+  </section>
+
+  <section class="section plate" style="color: var(--color-bg);">
+    <div style="max-width: 1080px; margin: 0 auto;">
+      <h6 style="color: var(--color-accent-300);">Quem pode realizar</h6>
+      <h2 style="color: var(--color-bg); max-width: 700px;">Um Organismo de Inspeção Acreditado pela CGCRE/Inmetro</h2>
+      <p style="max-width: 700px; font-size: 16px; opacity: 0.85;">A inspeção deve ser realizada por um Organismo de Inspeção devidamente acreditado pela Coordenação-Geral de Acreditação do Inmetro (CGCRE), dentro do respectivo escopo de acreditação. Ao contratar, verifique se o organismo emite nota fiscal, informa o resultado à concessionária, gera ART junto ao CREA e possui seguro de Responsabilidade Civil.</p>
+      <div class="plate-grid" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-6);">
+        <div class="blueprint" style="position:relative; padding: var(--space-4); border-color: color-mix(in srgb, var(--color-bg) 35%, transparent);">
+          
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7;">Fundação</div>
+          <div style="font-family: var(--font-heading); font-size: 26px; margin-top: 4px;">2019</div>
+        </div>
+        <div class="blueprint" style="position:relative; padding: var(--space-4); border-color: color-mix(in srgb, var(--color-bg) 35%, transparent);">
+          
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7;">Registro CREA-RJ</div>
+          <div style="font-family: var(--font-heading); font-size: 26px; margin-top: 4px;">2019200638</div>
+        </div>
+        <div class="blueprint" style="position:relative; padding: var(--space-4); border-color: color-mix(in srgb, var(--color-bg) 35%, transparent);">
+          
+          <div style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7;">CNPJ</div>
+          <div style="font-family: var(--font-heading); font-size: 22px; margin-top: 4px;">33.519.767/0001-80</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="verificacoes" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">O procedimento</h6>
+    <h2>O que é verificado durante a Inspeção de Gás?</h2>
+    <div class="checklist-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); margin-top: var(--space-6);">
+      <sc-for list="{{ checklist }}" as="item" hint-placeholder-count="8">
+        <div class="card blueprint" style="position:relative;">
+          
+          <div class="card-title" style="font-size: 15px;">{{ item }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="section" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">Se houver pendências</h6>
+    <h2>O que acontece se forem encontradas irregularidades?</h2>
+    <p style="max-width: 720px; font-size: 16px;">Uma irregularidade na primeira inspeção não significa que todo o processo precise ser contratado de novo. As irregularidades são indicadas para que o responsável providencie as correções dentro do prazo legal aplicável. Depois das adequações, ocorre a reinspeção — a segunda visita do mesmo Organismo que realizou a primeira, para verificar se as pendências foram sanadas.</p>
+    <div class="card blueprint" style="position:relative; max-width: 480px; padding: var(--space-4); margin-top: var(--space-3);">
+      
+      <div class="tag tag-accent" style="margin-bottom: var(--space-2);">Incluída no serviço</div>
+      <div class="card-title">Na Enquesta, a reinspeção já está incluída no valor contratado</div>
+      <p class="card-body">Não é uma nova inspeção — e deve ser feita pelo mesmo Organismo responsável pela primeira.</p>
+    </div>
+  </section>
+
+  <section class="section" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">Onde atendemos</h6>
+    <h2>Regiões atendidas no Rio de Janeiro</h2>
+    <div class="region-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6);">
+      <div class="card blueprint" style="position:relative; padding: var(--space-4);">
+        
+        <div class="card-kicker">Sede</div>
+        <div class="card-title">Barra da Tijuca e Zona Oeste</div>
+        <p class="card-body">Atendimento em Barra da Tijuca, Recreio dos Bandeirantes e demais localidades da Zona Oeste.</p>
+        <a class="enq-link" href="Inspecao-Gas-Barra-da-Tijuca.dc.html" style="font-size: 13px;">Ver inspeção de gás na Barra →</a>
+      </div>
+      <sc-if value="{{ showZonaSul }}" hint-placeholder-val="{{ true }}">
+        <div class="card blueprint" style="position:relative; padding: var(--space-4);">
+          
+          <div class="card-kicker">Também atendemos</div>
+          <div class="card-title">Zona Sul do Rio</div>
+          <p class="card-body">Copacabana, Ipanema, Leblon, Lagoa, São Conrado e Gávea. Se seu bairro não estiver na lista, consulte disponibilidade.</p>
+          <a class="enq-link" href="https://wa.me/{{ whatsappDigits }}" target="_blank" rel="noopener" style="font-size: 13px;">Consultar atendimento no meu bairro →</a>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <section class="section" style="max-width: 1080px; margin: 0 auto;">
+    <div class="card blueprint" style="position:relative; display:flex; align-items:center; justify-content: space-between; gap: var(--space-4); padding: var(--space-6); flex-wrap: wrap;">
+      
+      <div>
+        <h3 style="margin-bottom: var(--space-1);">Recebeu uma notificação da Naturgy?</h3>
+        <p class="card-body" style="max-width: 480px;">Se você recebeu um aviso sobre inspeção ou risco de corte, saiba exatamente o que fazer agora.</p>
+      </div>
+      <a class="btn btn-primary" href="Recebi-Notificacao-Naturgy.dc.html">Recebi uma notificação, quero orientação</a>
+    </div>
+  </section>
+
+  <section class="section" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">Por que a Enquesta</h6>
+    <h2>Por que realizar sua inspeção com a Enquesta?</h2>
+    <ul style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-6); list-style: none; margin: var(--space-6) 0 0; padding: 0; font-size: 15px;">
+      <sc-for list="{{ reasons }}" as="reason" hint-placeholder-count="5">
+        <li style="display:flex; gap: var(--space-2);">
+          <span style="color: var(--color-accent-700); font-family: var(--font-heading);">+</span>
+          <span>{{ reason }}</span>
+        </li>
+      </sc-for>
+    </ul>
+  </section>
+
+  <section class="section" id="faq" style="max-width: 1080px; margin: 0 auto;">
+    <h6 style="color: var(--color-accent-700);">Dúvidas comuns</h6>
+    <h2>Perguntas Frequentes</h2>
+    <div style="display:flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-4);">
+      <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="4">
+        <details style="border: 1px solid var(--color-divider); padding: var(--space-3) var(--space-4);">
+          <summary style="cursor: pointer; font-family: var(--font-heading); font-weight: 600; font-size: 16px;">{{ faq.q }}</summary>
+          <p style="margin-top: var(--space-2); font-size: 14px; opacity: 0.85;">{{ faq.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <section class="section plate" style="color: var(--color-bg);">
+    <div style="max-width: 1080px; margin: 0 auto; text-align: center;">
+      <div class="tag tag-outline" style="color: var(--color-bg); border-color: color-mix(in srgb, var(--color-bg) 60%, transparent); margin-bottom: var(--space-4);">Empresa acreditada pela CGCRE/Inmetro</div>
+      <h2 style="color: var(--color-bg);">Agende sua Inspeção Periódica de Gás</h2>
+      <p style="opacity: 0.85; max-width: 560px; margin: 0 auto var(--space-6);">Precisa realizar sua inspeção, recebeu uma notificação, ou sua última inspeção está completando 5 anos?</p>
+      <div style="display:flex; gap: var(--space-3); justify-content:center; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="https://wa.me/{{ whatsappDigits }}" target="_blank" rel="noopener" style="padding: 12px 24px; font-size: 16px;">Agendar pelo WhatsApp</a>
+        <a class="btn btn-secondary" href="https://wa.me/{{ whatsappDigits }}" target="_blank" rel="noopener" style="padding: 12px 24px; font-size: 16px; border-color: color-mix(in srgb, var(--color-bg) 50%, transparent); color: var(--color-bg);">Falar com a Enquesta</a>
+      </div>
+      <p style="margin-top: var(--space-6); font-size: 13px; opacity: 0.65;">Av. Embaixador Abelardo Bueno, 1340 – sala 401, CEP 22775-023 – Barra da Tijuca, RJ</p>
+    </div>
+  </section>
+
+  <footer style="padding: var(--space-6) max(24px, calc((100% - 1080px) / 2)); font-size: 12px; opacity: 0.6; display:flex; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap;">
+    <span>© Enquesta Inspeções Prediais de Gás</span>
+    <span>Organismo de Inspeção Acreditado CGCRE/Inmetro</span>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5521900000000&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;showZonaSul&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Regiões&quot;}}">
+
+class Component extends DCLogic {
+  renderVals() {
+    const whatsapp = this.props.whatsappNumber ?? "5521900000000";
+    return {
+      whatsappDigits: whatsapp.replace(/\D/g, ""),
+      showZonaSul: this.props.showZonaSul ?? true,
+      checklist: [
+        "Condições das tubulações e conexões",
+        "Estanqueidade (vazamento de gás) da instalação",
+        "Condições dos aparelhos a gás",
+        "Ventilação dos ambientes",
+        "Sistemas de exaustão e chaminés, quando aplicáveis",
+        "Aspectos relacionados à combustão dos aparelhos",
+        "Aspectos relacionados ao monóxido de carbono",
+        "Demais requisitos previstos para a instalação"
+      ],
+      reasons: [
+        "Organismo de Inspeção Acreditado pela CGCRE – Inmetro",
+        "Atendimento residencial e comercial",
+        "Atendimento em diferentes regiões do Rio de Janeiro",
+        "Reinspeção incluída no serviço contratado, quando necessária",
+        "Equipe especializada em inspeções de instalações de gás"
+      ],
+      faqs: [
+        { q: "A inspeção de gás é obrigatória?", a: "Sim, prevista na Lei Estadual nº 6.890/2014." },
+        { q: "De quanto em quanto tempo é feita?", a: "O ciclo é de 5 anos." },
+        { q: "Preciso pagar novamente pela reinspeção?", a: "Na Enquesta, não — já está incluída no valor contratado." },
+        { q: "A Enquesta atende Zona Sul, Barra e Recreio?", a: "Sim, e outras localidades — consulte disponibilidade para o seu bairro." }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

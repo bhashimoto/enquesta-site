@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $wa := printf "https://wa.me/%s" site.Params.whatsapp_digits }}
+
+<section class="section hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag tag-outline">Atendimento no Rio de Janeiro</span>
+      <h1>{{ .Title }}</h1>
+      <div class="lead">{{ .Content }}</div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="{{ $wa }}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      </div>
+    </div>
+    <div class="photo-slot" role="img" aria-label="Foto: região atendida no Rio de Janeiro">
+      <span>Foto: fachada / região atendida</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap measure">
+    <p class="eyebrow">Onde estamos</p>
+    <h2>Nosso endereço</h2>
+    <p>A Enquesta fica na Barra da Tijuca — {{ site.Params.endereco }}, CEP {{ site.Params.cep }} — e atende imóveis residenciais e comerciais em diferentes regiões da cidade do Rio de Janeiro.</p>
+  </div>
+</section>
+
+{{ with .Params.bairros }}
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Bairros atendidos</p>
+    <h2>Regiões com atendimento</h2>
+    <div class="bairros-grid">
+      {{ range . }}<div class="card"><div class="card-title">{{ . }}</div></div>{{ end }}
+    </div>
+    <p class="note">Não encontrou seu bairro? Consulte nossa equipe para verificar a disponibilidade de atendimento.</p>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "cta-plate.html" (dict "heading" "Agende sua inspeção de gás" "body" "Organismo de Inspeção Acreditado pela CGCRE/Inmetro, atendendo residências e empresas no Rio de Janeiro.") }}
+{{ end }}

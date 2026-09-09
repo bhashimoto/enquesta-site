@@ -1,0 +1,35 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">Enquesta</a>
+
+    <nav class="main-nav">
+      <ul>
+        {{ $site := .Site }}
+        {{ range .Site.Menus.main }}
+        <li class="nav-item{{ if .Params.hasChildren }} has-dropdown{{ end }}">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ if eq .Name "Serviços" }}
+          <ul class="dropdown">
+            {{ range $site.Menus.servicos }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+          {{ else if eq .Name "Áreas atendidas" }}
+          <ul class="dropdown">
+            {{ range $site.Menus.areas }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <a href="{{ .Site.Params.whatsapp }}" class="cta-whatsapp" target="_blank" rel="noopener">
+      Falar pelo WhatsApp
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+  </div>
+</header>

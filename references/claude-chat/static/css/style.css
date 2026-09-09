@@ -1,0 +1,18 @@
+/* Base mínima — a identidade visual definitiva entra depois desta fase */
+body { font-family: sans-serif; margin: 0; color: #222; line-height: 1.6; }
+.header-inner, .footer-inner { max-width: 1100px; margin: 0 auto; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
+.main-nav ul { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.nav-item { position: relative; }
+.dropdown { display: none; position: absolute; top: 100%; left: 0; list-style: none; margin: 0; padding: 0.5rem 0; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 220px; }
+.has-dropdown:hover .dropdown { display: block; }
+.dropdown li a { display: block; padding: 0.5rem 1rem; white-space: nowrap; }
+.cta-whatsapp { background: #16a34a; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; }
+.menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+.page-content { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+.footer-inner { flex-wrap: wrap; gap: 2rem; align-items: flex-start; }
+.footer-bottom { text-align: center; padding: 1rem; font-size: 0.85rem; color: #666; }
+
+@media (max-width: 768px) {
+  .main-nav { display: none; }
+  .menu-toggle { display: block; }
+}

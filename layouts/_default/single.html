@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="section">
+  <div class="wrap prose">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+</article>
+{{ partial "cta-plate.html" (dict "showAddress" false) }}
+{{ end }}

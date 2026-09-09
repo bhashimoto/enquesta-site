@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main id="conteudo">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/nav.js" | relURL }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{{- /* dict: heading (string), body (string), showAddress (bool) */ -}}
+{{- $heading := .heading | default "Agende sua Inspeção Periódica de Gás" -}}
+{{- $body := .body | default "Precisa realizar sua inspeção, recebeu uma notificação, ou sua última inspeção está completando 5 anos?" -}}
+<section class="section plate">
+  <div class="wrap plate-inner">
+    <span class="tag tag-outline tag-on-dark">Empresa acreditada pela CGCRE/Inmetro</span>
+    <h2>{{ $heading }}</h2>
+    <p class="plate-lead">{{ $body }}</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://wa.me/{{ site.Params.whatsapp_digits }}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn btn-secondary btn-on-dark" href="{{ "/contato/" | relURL }}">Falar com a Enquesta</a>
+    </div>
+    {{- if .showAddress }}
+    <p class="plate-addr">{{ site.Params.endereco }} — CEP {{ site.Params.cep }}</p>
+    {{- end }}
+  </div>
+</section>

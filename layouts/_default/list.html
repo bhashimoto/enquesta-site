@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="section">
+  <div class="wrap prose">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="card-grid">
+      {{ range .Pages.ByWeight }}
+      <div class="card">
+        <div class="card-title">{{ .Title }}</div>
+        {{ with .Params.description }}<p class="card-body">{{ . }}</p>{{ end }}
+        <a class="enq-link" href="{{ .RelPermalink }}">Ver página →</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "cta-plate.html" (dict "showAddress" false) }}
+{{ end }}

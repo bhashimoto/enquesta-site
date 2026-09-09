@@ -1,0 +1,57 @@
+# Dados reaproveitados pelos layouts. Credenciais confirmadas pelo cliente
+# (design handoff) — não adicionar dados não verificados.
+
+[credenciais]
+fundacao = "2019"
+crea_rj = "2019200638"
+cnpj = "33.519.767/0001-80"
+
+checklist = [
+  "Condições das tubulações e conexões",
+  "Estanqueidade (vazamento de gás) da instalação",
+  "Condições dos aparelhos a gás",
+  "Ventilação dos ambientes",
+  "Sistemas de exaustão e chaminés, quando aplicáveis",
+  "Aspectos relacionados à combustão dos aparelhos",
+  "Aspectos relacionados ao monóxido de carbono",
+  "Demais requisitos previstos para a instalação",
+]
+
+motivos = [
+  "Organismo de Inspeção Acreditado pela CGCRE – Inmetro",
+  "Atendimento residencial e comercial",
+  "Atendimento em diferentes regiões do Rio de Janeiro",
+  "Reinspeção incluída no serviço contratado, quando necessária",
+  "Equipe especializada em inspeções de instalações de gás",
+]
+
+[[faq]]
+q = "A inspeção de gás é obrigatória?"
+a = "Sim, prevista na Lei Estadual nº 6.890/2014."
+
+[[faq]]
+q = "De quanto em quanto tempo é feita?"
+a = "O ciclo é de 5 anos."
+
+[[faq]]
+q = "Preciso pagar novamente pela reinspeção?"
+a = "Na Enquesta, não — já está incluída no valor contratado."
+
+[[faq]]
+q = "A Enquesta atende Zona Sul, Barra e Recreio?"
+a = "Sim, e outras localidades — consulte disponibilidade para o seu bairro."
+
+[[naturgy_steps]]
+n = "1"
+title = "Verifique o prazo indicado"
+body = "Confirme até quando a inspeção precisa ser realizada para evitar suspensão do fornecimento."
+
+[[naturgy_steps]]
+n = "2"
+title = "Agende a inspeção com um Organismo Acreditado"
+body = "A inspeção deve ser feita por um Organismo de Inspeção Acreditado pela CGCRE/Inmetro, como a Enquesta."
+
+[[naturgy_steps]]
+n = "3"
+title = "Corrija pendências, se houver"
+body = "Se o laudo apontar irregularidades, a reinspeção — pelo mesmo Organismo — confirma que tudo foi corrigido."

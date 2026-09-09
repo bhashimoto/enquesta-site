@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="nav">
+    <a class="nav-brand" href="{{ "/" | relURL }}">ENQUESTA</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Principal">
+      <ul class="nav-list">
+        {{ $page := . }}
+        {{ range site.Menus.main }}
+          {{ $current := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+          <li class="nav-item{{ if .Params.hasChildren }} has-dropdown{{ end }}{{ if $current }} is-current{{ end }}">
+            <a href="{{ .URL }}"{{ if $current }} aria-current="page"{{ end }}>{{ .Name }}</a>
+            {{ if eq .Name "Serviços" }}
+              <ul class="dropdown">
+                {{ range site.Menus.servicos }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+              </ul>
+            {{ else if eq .Name "Áreas atendidas" }}
+              <ul class="dropdown">
+                {{ range site.Menus.areas }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+              </ul>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/{{ site.Params.whatsapp_digits }}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+    </nav>
+  </div>
+</header>

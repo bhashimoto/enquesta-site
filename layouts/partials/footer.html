@@ -1,0 +1,42 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <span class="footer-brand">ENQUESTA</span>
+      <p class="footer-sub">Inspeções Prediais de Gás</p>
+      <address>
+        {{ site.Params.endereco }}<br>
+        CEP {{ site.Params.cep }}<br>
+        {{ site.Params.telefone }}
+      </address>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-h">Serviços</h2>
+      <ul>
+        {{ range site.Menus.servicos }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-h">Áreas atendidas</h2>
+      <ul>
+        {{ range site.Menus.areas }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-h">Institucional</h2>
+      <ul>
+        <li><a href="{{ "/sobre/" | relURL }}">Sobre</a></li>
+        <li><a href="{{ "/perguntas-frequentes/" | relURL }}">Perguntas frequentes</a></li>
+        <li><a href="{{ "/contato/" | relURL }}">Contato</a></li>
+        <li><a href="{{ "/recebi-notificacao-da-naturgy/" | relURL }}">Recebi notificação da Naturgy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; {{ now.Year }} Enquesta Inspeções Prediais de Gás LTDA</span>
+    <span>Organismo de Inspeção Acreditado CGCRE/Inmetro</span>
+  </div>
+</footer>

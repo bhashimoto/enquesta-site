@@ -1,0 +1,40 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <strong>Enquesta Inspeções Prediais de Gás</strong>
+      <p>{{ .Site.Params.endereco }}</p>
+      <p>{{ .Site.Params.telefone }}</p>
+    </div>
+
+    <div class="footer-col">
+      <strong>Serviços</strong>
+      <ul>
+        {{ range .Site.Menus.servicos }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <strong>Áreas atendidas</strong>
+      <ul>
+        {{ range .Site.Menus.areas }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <strong>Institucional</strong>
+      <ul>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/perguntas-frequentes/">Perguntas frequentes</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} Enquesta Inspeções Prediais de Gás LTDA. Organismo de Inspeção Acreditado CGCRE/Inmetro.</p>
+  </div>
+</footer>
