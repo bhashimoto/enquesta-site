@@ -10,9 +10,9 @@ disableKinds = ["taxonomy", "term", "rss"]
 
 [params]
   # Placeholders — substituir pelos valores reais antes de publicar.
-  whatsapp_digits = "5521900000000"
-  telefone = "(21) 3100-XXXX"
-  email = "contato@enquesta.com.br"
+  whatsapp_digits = "5521982585215"
+  telefone = "(21) 3100-5030"
+  email = "enquesta@enquesta.com.br"
   endereco = "Av. Embaixador Abelardo Bueno, 1340 – sala 401, Barra da Tijuca, RJ"
   cep = "22775-023"
   description = "Inspeção periódica de gás no Rio de Janeiro para imóveis residenciais e comerciais. Enquesta, Organismo de Inspeção Acreditado pela CGCRE/Inmetro."
